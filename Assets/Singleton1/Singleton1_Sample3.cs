@@ -15,6 +15,7 @@ namespace Singleton1.Sample3
                 if (m_Instance == null)
                 {
                     var obj = new GameObject(typeof(T).Name);
+                    DontDestroyOnLoad(obj);
                     m_Instance = obj.AddComponent<T>();
                 }
                 return m_Instance;
