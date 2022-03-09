@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Singleton1.Sample3
+namespace Singleton2.Sample1
 {
     public class MonoBehaviourSingletonTemplate<T> : MonoBehaviour where T : MonoBehaviour
     {
@@ -27,22 +27,14 @@ namespace Singleton1.Sample3
         }
     }
 
-    public class Item
+    public class MapData
     {
-        public int ItemID { get; }
-        public string ItemName { get; }
-
+        //TODO
     }
 
-    public class ItemInventory : MonoBehaviourSingletonTemplate<ItemInventory>
+    public class TableDataManager : MonoBehaviourSingletonTemplate<TableDataManager>
     {
-        public Item GetItem(int itemID)
-        {
-            //TODO
-            return default;
-        }
-
-        public bool AddItem(Item item)
+        public MapData GetMapData(int mapID)
         {
             //TODO
             return default;
